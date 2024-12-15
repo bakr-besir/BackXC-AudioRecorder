@@ -1,0 +1,116 @@
+"AndroidManifest.xml": 
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AudioRecorder"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AudioRecorder">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest> 
+ 
+File not found: "java\com\bakrxc\audiorecorder2\MainActivity.java" 
+File not found: "java\com\bakrxc\audiorecorder2\AudioNote.java" 
+File not found: "java\com\bakrxc\audiorecorder2\AudioNoteRecorder.java" 
+File not found: "java\com\bakrxc\audiorecorder2\AudioNotesManager.java" 
+File not found: "java\com\bakrxc\audiorecorder2\AudioNotePlayer.java" 
+File not found: "java\com\bakrxc\audiorecorder2\ArrayAdapterUtil.java" 
+"res\layout\activity_main.xml": 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Recording" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Stop Recording" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+ 
+ 
+"res\layout\audio_item.xml": 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/audioNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Audio Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/audioDurationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duration"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/audioArtistTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Artist"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/audioUriTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Audio URI"
+        android:textSize="12sp"
+        android:textColor="#666" />
+</LinearLayout>
+ 
+ 
